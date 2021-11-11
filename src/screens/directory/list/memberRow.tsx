@@ -7,16 +7,16 @@ type Props = {
     onPress: (member: Member) => void;
 }
 
-const ListRow = ({ member, onPress }: Props) => {
-    const { koreanName, phoneNumber } = member;
+const MemberRow = ({ member, onPress }: Props) => {
+    const { id, koreanName, phoneNumber } = member;
 
     return (
         <View>
             <Pressable onPress={() => onPress(member)}>
-                <Text>{`${koreanName} (${phoneNumber})`}</Text>
+                <Text testID={id}>{`${koreanName} (${phoneNumber})`}</Text>
             </Pressable>
         </View>
     )
 };
 
-export default ListRow;
+export default MemberRow;

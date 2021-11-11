@@ -1,5 +1,8 @@
 export type Address = {
-    
+    streetAddress: string;
+    city: string;
+    state: string;
+    zipCode: string;
 }
 
 export type Member = {
@@ -10,5 +13,5 @@ export type Member = {
     email?: string;
     birthDate?: Date;
     photoUrl?: string;
-    address: Address;
+    address?: Address;
 }
