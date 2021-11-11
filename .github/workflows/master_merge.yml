@@ -1,7 +1,7 @@
-name: Continuous Integration
+name: Master Build
 
 on:
-  pull_request:
+  push:
     branches:
       - master
 
@@ -16,11 +16,7 @@ jobs:
 
       - name: Install node modules
         run: |
-          npm install
-
-      - name: Run unit tests
-        run: |
-          npm test
+            npm ci
 
       - name: Cache Gradle Wrapper
         uses: actions/cache@v2
